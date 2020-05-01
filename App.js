@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { Share, Button, View } from "react-native";
 import { StyleSheet } from "react-native";
 
-class ShareExample extends Component {
+class Publish extends Component {
   onShare = async () => {
     try {
       const result = await Share.share({
-        message:
-          "React Native | A framework for building native apps using React",
+        message: "bradcast to others",
       });
 
       if (result.action === Share.sharedAction) {
@@ -27,12 +26,12 @@ class ShareExample extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button onPress={this.onShare} title='Share' />
+        <Button onPress={this.onShare} title='publish' />
       </View>
     );
   }
 }
-export default ShareExample;
+export default Publish;
 
 const styles = StyleSheet.create({
   container: {
